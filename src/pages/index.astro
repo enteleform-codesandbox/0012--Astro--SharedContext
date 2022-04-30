@@ -1,0 +1,31 @@
+---
+//###  Styles  ###//
+import "styles/global.css"
+
+//###  Components  ###//
+import PreactCounter from "components/PreactCounter"
+import ReactCounter  from "components/ReactCounter"
+import SolidCounter  from "components/SolidCounter"
+import SvelteCounter from "components/SvelteCounter.svelte"
+import VueCounter    from "components/VueCounter.vue"
+---
+
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+	</head>
+
+	<body>
+		<main>
+			<PreactCounter client:visible> <h1>{"Hello Preact!"}</h1> </PreactCounter>
+			<ReactCounter  client:visible> <h1>{"Hello React!" }</h1> </ReactCounter >
+			<SolidCounter  client:visible> <h1>{"Hello Solid!" }</h1> </SolidCounter >
+			<VueCounter    client:visible> <h1>{"Hello Vue!"   }</h1> </VueCounter   >
+			<SvelteCounter client:visible> <h1>{"Hello Svelte!"}</h1> </SvelteCounter>
+		</main>
+	</body>
+
+</html>
